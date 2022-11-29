@@ -88,50 +88,44 @@ var finances = [
 ];
 
 
-// I created a function to accomodate my for loop 
 function findData() {
-      
-    }
+
+
+}
     var totalRecords = finances.length; //here I have declared all the variables I want to use 
     var numRecords = 0;
     var numMonths = 0;  
-    var Sum = 0;
     var average = 0;
     var total = 0;
+    var sum = 0;
 
     
-    for(var i = 0; i < finances.length; i++ ) {
+    for(var i = 0; i < finances.length; i++ ) { //First for loop used to work out length of dataset and work out total months 
         console.log(finances[i])
         numMonths = numMonths + 1;
         total = total + finances[i][1]
-    }  
+        
+    }   
+    var sum = 0;
+    for (var i = 0; i < finances.length; i++) { //second for loop used to work out the average 
+    var currentMonthAndSale = finances[i]; 
+    var currentSale = currentMonthAndSale[1];
+    sum = sum + currentSale;
+}
+   
+    var average = sum / finances.length; //code to work out the average 
 
-    if(finances[i][1] > finances[i-1][1]){
-    }
-  else{
-  }
+  
+//This is my analysis printed out in the console 
+console.log ("---------------------------------------------")
+console.log ("Financial analysis") //title Financial Analysis 
+console.log("Total Months: " + numMonths); //number of months in the data set
+console.log("Total Sum: $" + total); // total amount of sales in column 2 
+console.log("Average Changes " + average); //works out the average 
 
-
-    average = total/numMonths //code used to work 
-    
-    //This is my analysis printed out in the console 
-    console.log ("---------------------------------------------")
-    console.log ("Financial analysis") //title
-    console.log("Total Months: " + numMonths); //number of months in the data set
-    console.log("Total Sum: $" + total); // total amount of sales in column 2 
-    console.log("Average Changes " + average); 
-
-
-
-
-
-
-findData() //Here I call the function to display in the console 
+findData(); //Call the function to display in the console 
 
 
-
-
-// Net total of Profit / Loss -->Total Profit - Totatl Losses = Net Total
 
 
 
